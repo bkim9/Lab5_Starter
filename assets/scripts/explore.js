@@ -52,21 +52,12 @@ function speak() {
   }
 }
 
-function speakingCheck() {
-  const smileImgE = document.querySelector('header + img');
-  console.log(synth.speaking);
-  smileImgE.src = (synth.speaking)? "/assets/images/smiling-open.png":"/assets/images/smiling.png";
-}
 
 function init() {
   // TODO
-  // const smileImgE = document.querySelector('header + img');
-  // // const textInputE = document.querySelector('#text-to-speak');
   const voiceSelectE = document.querySelector('#voice-select');
   const talkButtonE = document.querySelector('select + button');
   populateVoiceList();
 
   talkButtonE.addEventListener('click',speak)
 }
-speakingCheck();
-// smileImgE.src = "smiling" + '-open' + '.svg';
