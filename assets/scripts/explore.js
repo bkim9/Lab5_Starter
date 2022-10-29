@@ -35,6 +35,7 @@ function speak() {
     const utterThis = new SpeechSynthesisUtterance(textInputE.value);
     utterThis.onend = function (event) {
       console.log("speech onend");
+      smileImgE.src = "/assets/images/smiling.png";
     };
     utterThis.onerror = function (event) {
       console.error('speech onerror');
