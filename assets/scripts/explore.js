@@ -28,14 +28,14 @@ function speak() {
     return;
   } 
   const smileImgE = document.querySelector('header + img');
-  smileImgE.src = "/assets/images/smiling-open.png";
+  smileImgE.src = "./assets/images/smiling-open.png";
   const textInputE = document.querySelector('#text-to-speak');
   const voiceSelectE = document.querySelector('#voice-select');
   if (textInputE.value !== "") {
     const utterThis = new SpeechSynthesisUtterance(textInputE.value);
     utterThis.onend = function (event) {
       console.log("speech onend");
-      smileImgE.src = "/assets/images/smiling.png";
+      smileImgE.src = "./assets/images/smiling.png";
     };
     utterThis.onerror = function (event) {
       console.error('speech onerror');
